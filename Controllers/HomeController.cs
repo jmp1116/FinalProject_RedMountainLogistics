@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using FinalProject_AscentApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FinalProject_AscentApp.Controllers
 {
@@ -18,6 +19,7 @@ namespace FinalProject_AscentApp.Controllers
             _logger = logger;
         }
 
+       
         public IActionResult Index()
         {
             return View();

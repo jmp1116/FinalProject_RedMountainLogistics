@@ -1,0 +1,20 @@
+﻿@model Customer
+<h2>Create a New Customer</h2>
+@using (Html.BeginForm("InsertCustomerToDatabase", "Customer", "Post"))
+{
+        <input asp-for="CustomerID" type="hidden" value="" />
+        <label asp-for="CompanyName" class="control-label">Company Name</label>
+        <input type="text" name="CompanyName" class="form-control" value="" />
+        <label asp-for="Credit" class="control-label">Credit</label>
+        <input type="number" step="0.01" name="Credit" class="form-control" />
+        <label asp-for="MoneySpent" class="control-label">Money Spent</label>
+        <input type="number" step="0.01" name="MoneySpent" class="form-control" />
+        <label asp-for="PhoneNumber" class="control-label">Phone Number</label>
+        <input type="text" name="PhoneNumber" class="form-control" value="" />
+        <label asp-for="CustomerEmail" class="control-label">Customer Email</label>
+        <input type="text" name="CustomerEmail" class="form-control" value=""/>
+
+  
+
+
+}

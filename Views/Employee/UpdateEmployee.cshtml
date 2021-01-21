@@ -1,0 +1,32 @@
+﻿@model Employee
+
+<h2>Update @Model.LastName</h2>
+
+@using (Html.BeginForm("UpdateEmployeeToDatabase", "Employee", "Postt"))
+{
+    <input asp-for="EmployeeID" type="hidden" value="@Model.EmployeeID" />
+
+    <label asp-for="FirstName" class="control-label">First Name</label>
+
+    <input type="text" name="FirstName" class="form-control" value="@Model.FirstName" />
+
+    <label asp-for="LastName" class="control-label">Last Name</label>
+
+    <input type="text" name="LastName" class="form-control" value="@Model.LastName" />
+
+    <label asp-for="Email" class="control-label">Email</label>
+
+    <input type="text" name="Email" class="form-control" value="@Model.Email" />
+
+    <label asp-for="Password" class="control-label">Password</label>
+
+    <input type="text" name="Password" class="form-control" value="@Model.Password" />
+
+    <label asp-for="Sales" class="control-label">Sales</label>
+
+    <input type="number" step="0.01" name="Sales" class="form-control" value="@Model.Sales" />
+    <br/>
+
+    <input type="submit" value="Update Customer" class="btn btn-primary" />
+
+}

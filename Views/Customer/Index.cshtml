@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Customer>
+
+
+<div style="display: block">
+    <a href="/Customer/InsertCustomer/">Create a New Customer</a>
+</div>
+
+<form method="get" asp-action="Index">
+    <p>
+        <input type="search" placeholder="Enter Customer Name Or Email..." value="@ViewData["GetCustomerData"]"  name="custSearch" style="width:500px;" />
+        <input type="submit" value="Search" class="btn btn-primary" />
+        <a asp-action="Index">Get All Customers</a>
+     </p>
+</form>
+
+
+<h2>Customers</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Company Name</th>
+        <th>Credit</th>
+        <th>Financial History</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+    </tr>
+
+    @foreach (var customer in Model)
+    {
+<tr>
+    <td>@customer.CustomerID</td>
+    <td>@customer.CompanyName</td>
+    <td>@customer.Credit</td>
+    <td>@customer.MoneySpent</td>
+    <td>@customer.PhoneNumber</td>
+    <td>@customer.CustomerEmail</td>
+    <td><a href=/Customer/ViewCustomer/@customer.CustomerID>Edit</a></td>
+
+</tr>
+
+    }
+</table>
