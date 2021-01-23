@@ -7,12 +7,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using FinalProject_AscentApp.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Dynamic;
+using System.Data;
 
 namespace FinalProject_AscentApp.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IDbConnection conn;
 
         public HomeController(ILogger<HomeController> logger)
         {

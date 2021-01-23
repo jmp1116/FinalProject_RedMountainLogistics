@@ -36,7 +36,7 @@ namespace FinalProject_AscentApp.Controllers
             var custQuery = from x in repo.GetAllCustomers() select x;
             if(!String.IsNullOrEmpty(custSearch))
             {
-                custQuery = custQuery.Where(x => x.CompanyName.Contains(custSearch) || x.CustomerEmail.Contains(custSearch));
+                custQuery = custQuery.Where(s => !string.IsNullOrEmpty(s.CompanyName) && s.CompanyName.Contains(custSearch));
             }
             return View(custQuery);
 

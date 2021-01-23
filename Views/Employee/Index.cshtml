@@ -3,12 +3,12 @@
 
 
 <div style="display: block">
-    <a href="/Employee/InsertEmployee/">Create a New Employee</a>
+   <a href="/Employee/InsertEmployee/">Create a New Employee</a>
 </div>
 
 <form method="get" asp-action="Index">
     <p>
-        <input type="search" placeholder="Enter Employee's Last Name..." value="@ViewData[" GetCustomerDetails"]" name="empSearch" style="width:500px;" />
+        <input class="form-control bg-white border-0 small" type="search" placeholder="Enter Employee's Last Name..." value="@ViewData[" GetCustomerDetails"]" name="empSearch" style="width:500px;" />
         <input type="submit" value="Search" class="btn btn-primary" />
         <a asp-action="Index">Get All Employees</a>
     </p>

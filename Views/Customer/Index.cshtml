@@ -7,8 +7,8 @@
 
 <form method="get" asp-action="Index">
     <p>
-        <input type="search" placeholder="Enter Customer Name Or Email..." value="@ViewData["GetCustomerData"]"  name="custSearch" style="width:500px;" />
-        <input type="submit" value="Search" class="btn btn-primary" />
+        <input class="form-control bg-white border-0 small" type="search" placeholder="Enter Company Name..." value="@ViewData["GetCustomerData"]"  name="custSearch" style="width:500px;" />
+            <input type="submit" value="Search" class="btn btn-primary" />
         <a asp-action="Index">Get All Customers</a>
      </p>
 </form>
